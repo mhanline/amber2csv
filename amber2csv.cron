@@ -1,0 +1,6 @@
+# /etc/cron.d/amber2csv: crontab entries for the amber2csv script
+#
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+*/5 * * * * user-id /path/to/project/amber2csv/.venv/bin/python3 /path/to/project/amber2csv/main.py > /tmp/cron_log.txt 2>&1
+1-59/5 * * * * user-id /path/to/project/amber2csv/.venv/bin/python3 /path/to/project/amber2csv/main.py > /tmp/cron_log.txt 2>&1

@@ -4,12 +4,13 @@ from time import sleep
 import requests
 import csv
 from datetime import datetime, timezone
-apiKey = ""
+siteID = "" #Your unique Amber Site ID
+apiKey = "" #Your API key from Amber: https://app.amber.com.au/developers/
 
 if __name__ == '__main__':
     sleep(3)
     headers = {
-        'Authorization': f'Bearer psk_a255a0ee5f332bc99bb3ae93615c5749',
+        'Authorization': f"Bearer {apiKey}",
         'accept': 'application/json'
     }
     nowtime = datetime.now().astimezone().replace(microsecond=0)
